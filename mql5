@@ -1,0 +1,104 @@
+
+// Program: M W Scanner
+// Developer: Forex Robot Easy Team
+// Site: forexroboteasy.com
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Function to scan the market and identify potential trading opportunities
+vector<string> scanMarket() {
+    vector<string> opportunities;
+    
+    // Perform market scanning logic here
+    
+    // Add identified opportunities to the vector
+    opportunities.push_back('EUR/USD');
+    opportunities.push_back('GBP/USD');
+    opportunities.push_back('USD/JPY');
+    
+    return opportunities;
+}
+
+// Function to analyze market trends and patterns and generate accurate signals
+void analyzeMarket(const vector<string>& opportunities) {
+    for (const string& currencyPair : opportunities) {
+        // Perform market analysis logic here
+        
+        // Generate signals based on trends and patterns
+        
+        cout << 'Signal generated for ' << currencyPair << endl;
+    }
+}
+
+// Function to customize scanner settings
+void customizeScanner() {
+    // Implement code to allow users to adjust scanner parameters
+}
+
+// Function to retrieve and process real-time data for up-to-date analysis
+void retrieveData() {
+    // Implement code to retrieve and process real-time data
+}
+
+// Function to integrate with Forex trading platforms for seamless trading execution
+void integrateWithTradingPlatform() {
+    // Implement code to integrate with trading platform
+}
+
+int main() {
+    // User-friendly interface
+    cout << 'M W Scanner' << endl;
+    cout << '-----------------' << endl;
+    cout << '1. Scan market' << endl;
+    cout << '2. Customize scanner' << endl;
+    cout << '3. Retrieve data' << endl;
+    cout << '4. Analyze market' << endl;
+    cout << '5. Integrate with trading platform' << endl;
+    cout << '6. Quit' << endl;
+    
+    int choice;
+    cin >> choice;
+    
+    while (choice != 6) {
+        switch (choice) {
+            case 1:
+                {
+                    vector<string> opportunities = scanMarket();
+                    analyzeMarket(opportunities);
+                }
+                break;
+            case 2:
+                customizeScanner();
+                break;
+            case 3:
+                retrieveData();
+                break;
+            case 4:
+                analyzeMarket(vector<string>());
+                break;
+            case 5:
+                integrateWithTradingPlatform();
+                break;
+            default:
+                cout << 'Invalid choice. Please try again.' << endl;
+                break;
+        }
+        
+        cout << '-----------------' << endl;
+        cout << '1. Scan market' << endl;
+        cout << '2. Customize scanner' << endl;
+        cout << '3. Retrieve data' << endl;
+        cout << '4. Analyze market' << endl;
+        cout << '5. Integrate with trading platform' << endl;
+        cout << '6. Quit' << endl;
+        
+        cin >> choice;
+    }
+    
+    cout << 'Exiting the M W Scanner program.' << endl;
+    
+    return 0;
+}
